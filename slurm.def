@@ -52,7 +52,7 @@ From: centos:7
    # download the source code and build the rpms
    cd /usr/local/src/
    wget https://download.schedmd.com/slurm/slurm-${SLURM_VERSION}.tar.bz2
-   rpmbuild -ta --with mysql --with lua slurm*.tar.bz2 2>&1 | tee slurm-${SLURM_VERSION}.build.`date --iso-8601=minutes| sed 's/:/h/g'`log
+   rpmbuild -ta --with mysql --with lua slurm*.tar.bz2 2>&1 | tee slurm-${SLURM_VERSION}.build.`date --iso-8601=minutes| sed 's/:/h/g'`.log
    rpm -qa --queryformat='%{name}.%{arch}\n' | sort|uniq |  grep -v ^gpg-pubkey  > installed-rpms.log
    # copy the created rpms to /tmp/rpmbuild
    [ -d /tmp/rpmbuild ] || mkdir /tmp/rpmbuild
