@@ -8,7 +8,7 @@ sudo singularity build /tmp/slurm_rpms.simg slurm.def
 
 You can re-use the container with:
 ```
-singularity exec -B `pwd` rpmbuild -ta --with mysql --with lua slurm-${SLURM_ANOTHER_VERSION}.tar.bz2
+singularity exec -B `pwd` /tmp/slurm_rpms.simg rpmbuild -ta --with mysql --with lua slurm-${SLURM_ANOTHER_VERSION}.tar.bz2
 ```
 
 You will get the Slurm rpms in `/tmp/rpmbuild`
