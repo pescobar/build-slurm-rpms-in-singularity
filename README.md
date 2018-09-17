@@ -1,0 +1,11 @@
+# build-slurm-rpms-in-singularity
+
+If you have a linux machine with [Singularity](https://www.sylabs.io/) and root/sudo access just run this command:
+
+```
+sudo singularity build /tmp/slurm_rpms.simg slurm.def && sudo rm -f /tmp/slurm_rpms.simg
+```
+
+You will get the Slurm rpms in `/tmp/rpmbuild`
+
+If you prefer to build the RPMs in a vagrant virtual machine you can check [these slides](https://scicore-unibas-ch.github.io/singularity-slides/#33)
