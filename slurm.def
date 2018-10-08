@@ -4,7 +4,7 @@ From: centos:7
 %post
 
    # check the versions in https://www.schedmd.com/downloads.php
-   export SLURM_VERSION="18.08.0"
+   export SLURM_VERSION="18.08.1"
    # bring up to date
    yum -y update
    # install the dependencies
