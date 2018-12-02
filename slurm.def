@@ -28,6 +28,7 @@ From: centos:7
    libibumad \
    libibumad-devel \
    libibumad-static \
+   libssh2-devel \
    lua-devel \
    man2html-core \
    mariadb-devel \
